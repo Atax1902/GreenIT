@@ -1,0 +1,37 @@
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GreenIT</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='/index.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <header>
+        <%- include('../components/header') %>
+    </header>
+    <main>
+        <h1>Votre empreinte carbone est de {VARIABLE} tonnes / an</h1>
+
+        Créer ici dynamiquement le tableau des réponses à partir d'un json des réponses saisies par l'utilsateur
+        <form id="download-form">
+            <label for="format">Choisissez le format :</label>
+            <select id="format" name="format">
+                <option value="csv">CSV</option>
+                <option value="json">JSON</option>
+                <option value="xlsx">XLSX</option>
+                <option value="ods">LibreOffice Calc (ODS)</option>
+            </select>
+            <button type="button" onclick="downloadFile()">Télécharger</button>
+        </form>
+    </main>
+    <footer>
+        <%- include('../components/footer') %>
+    </footer>
+</body>
+</html>
